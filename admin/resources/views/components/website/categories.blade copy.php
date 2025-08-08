@@ -1,0 +1,30 @@
+ @props(['categories'])
+
+ <section class="flat-spacing-2">
+     <div class="container">
+         <div class="row">
+             <div class="col-12">
+                 <div class="heading-section text-center">
+                     <h3 class="wow fadeInUp">Shop By Categories</h3>
+                     <p class="text-body-default text_secondary wow fadeInUp" data-wow-delay="0.1s">Fresh styles just in!
+                         Elevate your look.</p>
+                 </div>
+                 <div class="wrap-categories overflow-x-auto style-2 has-boxshadow">
+                     @foreach ($categories as $category)
+                         <div class="categories-item wow fadeInUp" data-wow-delay="{{ "0.$loop->iteration" }}s">
+                             <div class="icon">
+                                 {{-- <i class="icon-frame-4"></i> --}}
+                                 <img src="{{ $category['image'] }}" alt="{{ $category['title'] }}">
+                             </div>
+                             <div class="content">
+                                 <h5 class="title"><a href="{{ route('categories.show', $category['slug']) }}"
+                                         class="link">{{ $category['title'] }}</a></h5>
+                                 <p class="text-body-default text_secondary">{{ $category['products_count'] }} items</p>
+                             </div>
+                         </div>
+                     @endforeach
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
