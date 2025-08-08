@@ -248,7 +248,6 @@
 
 @push('scripts')
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuSiPhoDaOJ7aqtJVtQhYhLzwwJ7rQlmA"></script>
     <script type="text/javascript" src="{{ asset('theme/js/map-contact.js') }}"></script>
     <script type="text/javascript" src="{{ asset('theme/js/marker.js') }}"></script>
     <script type="text/javascript" src="{{ asset('theme/js/infobox.min.js') }}"></script>
